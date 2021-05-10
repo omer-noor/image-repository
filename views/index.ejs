@@ -97,6 +97,7 @@
                 <form action="/search" method="GET">
                 <div class="input-group mb-3">
                         <input type="text" class="form-control" id="search" name="search" placeholder="Search By Title,Tag" required>
+                        <input type="hidden" name="user" value=<%=user%> />
                         <p></p>
                         <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
                 </div>
