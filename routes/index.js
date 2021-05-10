@@ -7,7 +7,8 @@ const searchImages = require("../controllers/searchController")
 const deleteAll = require("../controllers/deleteAllController")
 var multer = require('multer');
 
-
+//Router for all the paths dealing with images and homepage
+//User multer to storage the images locally
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads')

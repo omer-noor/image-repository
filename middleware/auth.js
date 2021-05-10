@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 
+//Middleware to authenticate the jwt token
 module.exports = function(req, res, next) {
     console.log(req.query.token)
     const token = req.query.token;

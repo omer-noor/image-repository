@@ -5,6 +5,7 @@ const initRoutes = require("./routes/index")
 const startServer = require("./config/database")
 require('dotenv/config');
 
+//Set up routes for images
 
 initRoutes(app)
 
@@ -15,6 +16,8 @@ startServer();
 
 // Set EJS as templating engine
 app.set("view engine", "ejs");
+
+//Routes for users
 
 app.use("/user", user);
 

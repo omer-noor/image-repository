@@ -1,5 +1,6 @@
 var imgModel = require('../models/image');
 
+//Controller to view the images
 const viewImages = (req, res,) => {
     let user = req.query.user
     imgModel.find({}, (err, items) => {

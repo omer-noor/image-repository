@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+//Mongoose model for the image
 var imageSchema = new mongoose.Schema({
     title: String,
     filename: String,

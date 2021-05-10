@@ -6,11 +6,7 @@ const router = express.Router();
 const auth = require("../middleware/auth")
 const User = require("../models/User");
 
-/**
- * @method - POST
- * @param - /signup
- * @description - User SignUp
- */
+//Router for all the paths dealing with login
 
 router.post(
     "/signup",
@@ -127,6 +123,8 @@ router.post(
                 {
                     expiresIn: 3600
                 },
+                //Currently passing the token as a query in the URL, need to change to storing the token securely in
+                //local memory and authenticating users that way.
                 (err, token) => {
                     if (err) throw err;
                     res.status(200)
@@ -141,6 +139,9 @@ router.post(
         }
     }
 );
+
+//Currently uses the redirect query to fetch the username, in future versions I will need to store the JWT token in local memory and
+// authenticate the user that way
 
 router.get("/me", auth, async (req, res) => {
     try {
