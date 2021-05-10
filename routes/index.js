@@ -4,6 +4,7 @@ const deleteImage = require("../controllers/deleteController")
 const uploadImage = require("../controllers/uploadController")
 const viewImages = require("../controllers/viewController")
 const searchImages = require("../controllers/searchController")
+const deleteAll = require("../controllers/deleteAllController")
 var multer = require('multer');
 
 
@@ -20,6 +21,7 @@ var upload = multer({storage: storage});
 
 let routes = app => {
   router.get("/delete/:id",deleteImage.deleteImage)
+  router.get("/deleteall",deleteAll.deleteAll)
   router.post("/",upload.single("image"),uploadImage.uploadImage)
   router.get("/",viewImages.viewImages)
   router.get("/search/",searchImages.searchImages)

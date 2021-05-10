@@ -1,22 +1,22 @@
 var express = require('express')
 var app = express()
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose')
+const user = require("./routes/user");
 const initRoutes = require("./routes/index")
+const startServer = require("./config/database")
 require('dotenv/config');
+
+
 initRoutes(app)
 
-mongoose.connect(process.env.MONGO_URL,
-    {useNewUrlParser: true, useUnifiedTopology: true}, err => {
-        console.log('connected')
-    });
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+startServer();
 
 // Set EJS as templating engine
 app.set("view engine", "ejs");
 
+app.use("/user", user);
 
 var port = process.env.PORT || '3000'
 app.listen(port, err => {

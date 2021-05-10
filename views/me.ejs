@@ -9,59 +9,17 @@
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 </head>
 
-
 <body>
-
 <div class="container">
     <div class="row">
-        <nav class="navbar navbar-dark bg-primary">
-            <span class="navbar-brand mb-0 h1">ImageShare</span>
-            <span class="navbar-brand my-0 h1"><% if(user){ %>
-                Logged in as <u><%=user%></u>
-                <% } else{ %>
-                    Not Logged In
-                <% } %>
-        </nav>
-
+        <p></p>
+        <p></p>
+        <p></p>
         <div class="col-sm-8 mt-3">
-            <h1>ImageShare Repo</h1>
+            <h1>ImageShare</h1>
         </div>
+        <h1>Me</h1>
 
-        <div class="col-sm-6">
-        <form class="form-inline row" method="post" action="/user/login">
-            <div class="col">
-                <label>Email:</label>
-                <input type="text" name="email">
-            </div>
-            <div class="col">
-                <label>Password:</label>
-                <input type="password" name="password">
-            </div>
-            <div class="col mt-4">
-                <input type="submit" value="Login">
-            </div>
-        </form>
-        </div>
-
-        <div class="col-sm-8">
-        <form class="form-inline row" method="post" action="/user/signup">
-            <div class="col">
-                <label>Username:</label>
-                <input type="text" name="username">
-            </div>
-            <div class="col">
-                <label>Email:</label>
-                <input type="text" name="email">
-            </div>
-            <div class="col">
-                <label>Password:</label>
-                <input type="password" name="password">
-            </div>
-            <div class="col mt-4">
-                <input type="submit" value="Sign Up">
-            </div>
-        </form>
-        </div>
         <div class="col-sm-8 mt-3">
             <h2>Upload Image</h2>
             <form action="/" method="POST" enctype="multipart/form-data">
@@ -102,7 +60,6 @@
                 </div>
                 </form>
                 <a href="/" class="btn btn-primary btn-sm">Clear Search</a>
-                <a href="/deleteall" class="btn btn-danger btn-sm">Delete All Images</a>
                 <p></p>
             </div>
 

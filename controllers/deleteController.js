@@ -1,4 +1,4 @@
-var imgModel = require("../models/model");
+var imgModel = require("../models/image");
 const fs = require('fs')
 var path = require('path');
 
@@ -25,9 +25,9 @@ exports.deleteImage = function (req, res) {
         console.log("Success");
 
     });
-
-
     res.redirect('/');
+
+
 
 }
 

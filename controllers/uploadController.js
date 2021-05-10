@@ -1,12 +1,14 @@
 var fs = require('fs');
 var path = require('path');
-var imgModel = require('../models/model');
+var imgModel = require('../models/image');
 
 const uploadImage = (req, res,) => {
+    let tag = req.body.desc.toString().split(",")
+    let uniq = [...new Set(tag)];
     var obj = {
         title: req.body.name,
         filename: req.file.filename,
-        tags: req.body.desc.toString().split(","),
+        tags: uniq,
         img: {
             data: fs.readFileSync(path.join(__dirname,"../" + 'uploads/' + req.file.filename)),
             contentType: 'image/png'
