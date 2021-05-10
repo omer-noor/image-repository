@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Replace this with your MONGOURI.
-const MONGOURI = "mongodb+srv://shopify:imagerepo@cluster0.zkfjl.mongodb.net/Image-Repository?retryWrites=true&w=majority";
+const MONGOURI = "";
 
 const InitiateMongoServer = async () => {
     try {
