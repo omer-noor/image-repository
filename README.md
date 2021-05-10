@@ -5,10 +5,13 @@
 
 You will need to set up a MongoDB database and enter the URI in config/database.js
 
+In the case of a local MongoDB database the URI will be "mongodb://127.0.0.1:27017"
+
 ```shell
 $ npm install
 $ npm run devstart
 ```
+View the project frontend at http://localhost:3000/
 
 #### Implementation
 - ADD image(s) to the repository
