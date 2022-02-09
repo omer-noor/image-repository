@@ -1,5 +1,4 @@
-# Shopify Backend Developer Challenge
-## Image Repository 
+# Image Repository 
 
 ## Installation
 
